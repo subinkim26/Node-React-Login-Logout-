@@ -32,6 +32,9 @@ app.get('/api/hello', (req, res) =>{
 })
 
 app.post('/api/users/register', (req, res) => {
+
+  //회원가입할때 필요한 정보 client 에서 가져오면
+  //db에 넣어준다.
     const user = new User(req.body);
     //비밀번호 암호화
   
