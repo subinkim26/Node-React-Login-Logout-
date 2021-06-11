@@ -81,7 +81,7 @@ app.post('/api/users/register', (req, res) => {
   app.get('/api/users/auth', auth, (req, res)=>{
       res.status(200).json({
           _id: req.user._id,
-          isAdmin : req.user.role === 0 ? false : true,
+          isAdmin : req.user.role === 1,
           isAuth: true,
           email: req.user.email,
           name : req.user.name,
